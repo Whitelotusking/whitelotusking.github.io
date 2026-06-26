@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zhongxu Chen</title>
+    <meta
+      name="description"
+      content="Personal academic homepage of Zhongxu Chen, Harbin Engineering University."
+    >
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #152033;
+        --muted: #5b6678;
+        --line: #d9dee8;
+        --accent: #1f6feb;
+        --paper: #ffffff;
+        --bg: #f5f7fb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+      }
+
+      main {
+        width: min(760px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 72px 0;
+      }
+
+      .profile {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 40px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(32px, 6vw, 48px);
+        line-height: 1.1;
+        letter-spacing: 0;
+      }
+
+      .name-cn {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 22px;
+      }
+
+      .role {
+        margin: 24px 0 0;
+        font-size: 18px;
+      }
+
+      dl {
+        display: grid;
+        grid-template-columns: 130px 1fr;
+        gap: 12px 20px;
+        margin: 32px 0 0;
+      }
+
+      dt {
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      dd {
+        margin: 0;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
+
+      section {
+        margin-top: 36px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: 20px;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      @media (max-width: 560px) {
+        main {
+          width: min(100% - 24px, 760px);
+          padding: 32px 0;
+        }
+
+        .profile {
+          padding: 28px 22px;
+        }
+
+        dl {
+          grid-template-columns: 1fr;
+          gap: 4px 0;
+        }
+
+        dd + dt {
+          margin-top: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article class="profile" aria-labelledby="profile-name">
+        <h1 id="profile-name">Zhongxu Chen</h1>
+        <div class="name-cn">陈忠旭</div>
+
+        <p class="role">Student at Harbin Engineering University.</p>
+
+        <dl>
+          <dt>Affiliation</dt>
+          <dd>Harbin Engineering University</dd>
+
+          <dt>Email</dt>
+          <dd><a href="mailto:chenzhongxu@hrbeu.edu.cn">chenzhongxu@hrbeu.edu.cn</a></dd>
+        </dl>
+
+        <section aria-labelledby="research-interests">
+          <h2 id="research-interests">Research Interests</h2>
+          <p>Artificial intelligence and related research areas.</p>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
