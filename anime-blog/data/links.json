@@ -1,0 +1,20 @@
+[
+  {
+    "name": "GitHub",
+    "desc": "项目源码与博客数据都存放在这里。",
+    "url": "https://github.com/Whitelotusking",
+    "tag": "Code"
+  },
+  {
+    "name": "Anime Blog Repo",
+    "desc": "当前二次元博客所在目录，之后可以继续扩展成完整静态博客工程。",
+    "url": "https://github.com/Whitelotusking/whitelotusking.github.io/tree/main/anime-blog",
+    "tag": "Blog"
+  },
+  {
+    "name": "GitHub Pages Site",
+    "desc": "博客线上访问地址。",
+    "url": "https://whitelotusking.github.io/anime-blog/",
+    "tag": "Site"
+  }
+]
