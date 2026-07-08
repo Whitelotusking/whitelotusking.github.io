@@ -11,7 +11,9 @@ https://whitelotusking.github.io/anime-blog/
 ## 数据文件
 
 - `data/profile.json`：网站标题、作者、简介、个人标签。
-- `data/posts.json`：文章列表、分类、标签、摘要和正文。
+- `data/site.json`：首屏说明、站点统计卡片、快捷入口。
+- `data/posts.json`：文章列表、分类、标签、摘要、封面符号和正文。
+- `data/links.json`：友链与常用入口。
 - `data/music.json`：环境音乐播放器的原创合成器曲目配置。
 - `data/mascot.json`：Live2D 风格看板娘名称、提示语和闲置提示。
 - `data/comments.json`：giscus / GitHub Discussions 评论区配置。
@@ -27,6 +29,7 @@ https://whitelotusking.github.io/anime-blog/
   "date": "2026-07-08",
   "category": "Study",
   "summary": "文章摘要。",
+  "coverSymbol": "✦",
   "tags": ["Tag1", "Tag2"],
   "body": [
     { "type": "p", "text": "正文段落。" },
@@ -41,6 +44,8 @@ https://whitelotusking.github.io/anime-blog/
 ```text
 post.html?id=my-new-post
 ```
+
+新增文章后，建议同步更新 `sitemap.xml`，把新文章地址加入站点地图。
 
 ## 启用评论区
 
@@ -61,6 +66,10 @@ post.html?id=my-new-post
 - 分类筛选
 - 关键词搜索
 - 文章归档
+- 标签云
+- 友链与快捷入口
+- 首屏二次元插画感卡片
+- 首页站点统计
 - 暗黑模式
 - Shoka 风格渐变与樱花动效
 - 阅读进度条
@@ -74,6 +83,9 @@ post.html?id=my-new-post
 - 看板娘视线跟随鼠标
 - giscus 评论区模块
 - 评论区缺配置时的安全占位提示
+- `sitemap.xml`
+- `robots.txt`
+- `404.html`
 
 ## 阶段记录
 
@@ -81,7 +93,7 @@ post.html?id=my-new-post
 - Stage 2：音乐播放器、鼠标特效、阅读进度条、返回顶部和更多 Shoka 动效。已完成。
 - Stage 3：轻量 Live2D 风格看板娘，包含对话、关闭、唤回、拖拽和视线跟随。已完成。
 - Stage 4：评论区模块，基于 GitHub Discussions + giscus，支持安全占位和配置后自动启用。已完成。
-- Stage 5：如需要，再迁移到 Hexo/ShokaX 或 Astro 正式博客工程。
+- Stage 5：整体体验收尾，包含首屏视觉、文章封面符号、标签云、友链、站点统计、SEO 元信息、站点地图和 404 页面。已完成。
 
 ## 注意
 
