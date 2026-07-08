@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./assets/blog-core.css" />
   <link rel="stylesheet" href="./assets/effects.css" />
   <link rel="stylesheet" href="./assets/mascot.css" />
+  <link rel="stylesheet" href="./assets/comments.css" />
 </head>
 <body>
   <div class="bg-orb orb-a"></div>
@@ -44,6 +45,20 @@
       </div>
       <div class="related-list" id="related-list"></div>
     </section>
+
+    <section class="comments-section" id="comments" aria-labelledby="comments-title">
+      <div class="comments-card">
+        <div class="comments-head">
+          <div>
+            <p class="eyebrow">Comments</p>
+            <h2 id="comments-title">评论区</h2>
+            <p>基于 GitHub Discussions 的 giscus 评论系统。</p>
+          </div>
+          <span class="comments-status" id="comments-status">检查配置</span>
+        </div>
+        <div id="comments-root"></div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -54,5 +69,6 @@
   <script src="./assets/post.js"></script>
   <script src="./assets/effects.js"></script>
   <script src="./assets/mascot.js"></script>
+  <script src="./assets/comments.js"></script>
 </body>
 </html>
