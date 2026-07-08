@@ -6,6 +6,7 @@
   <title>白莲的小站</title>
   <meta name="description" content="一个 Shoka 风格的二次元个人博客，数据由 GitHub 仓库中的 JSON 文件驱动。" />
   <link rel="stylesheet" href="./assets/styles.css" />
+  <link rel="stylesheet" href="./assets/blog-core.css" />
 </head>
 <body>
   <div class="bg-orb orb-a"></div>
@@ -21,6 +22,7 @@
     </a>
     <nav class="nav">
       <a href="#posts">文章</a>
+      <a href="#archive">归档</a>
       <a href="#about">关于</a>
       <a href="#links">友链</a>
       <button id="theme-toggle" type="button" aria-label="切换主题">☾</button>
@@ -52,19 +54,31 @@
         <p class="eyebrow">Latest Posts</p>
         <h2>最近文章</h2>
       </div>
+      <div class="toolbar" aria-label="文章筛选工具">
+        <input id="search-input" class="search-box" type="search" placeholder="搜索标题、摘要、分类或标签" autocomplete="off" />
+        <div class="filter-row" id="category-filters" aria-label="分类筛选"></div>
+      </div>
       <div class="post-grid" id="post-list"></div>
+    </section>
+
+    <section class="section" id="archive">
+      <div class="section-head">
+        <p class="eyebrow">Archive</p>
+        <h2>文章归档</h2>
+      </div>
+      <div class="archive-list" id="archive-list"></div>
     </section>
 
     <section class="section split" id="links">
       <div class="glass info-panel">
         <p class="eyebrow">GitHub as Data</p>
         <h2>数据存储方式</h2>
-        <p>这个页面会读取仓库中的 <code>anime-blog/data/posts.json</code> 和 <code>anime-blog/data/profile.json</code>。之后你只要改 JSON 或 Markdown，就能更新网站内容。</p>
+        <p>这个页面会读取仓库中的 <code>anime-blog/data/posts.json</code> 和 <code>anime-blog/data/profile.json</code>。之后你只要改 JSON，就能更新网站内容。</p>
       </div>
       <div class="glass info-panel">
-        <p class="eyebrow">Todo</p>
-        <h2>下一步可加功能</h2>
-        <p>可以继续加入评论区、音乐播放器、Live2D 看板娘、文章详情页、标签归档和真正的 Hexo/Shoka 构建流程。</p>
+        <p class="eyebrow">Stage Plan</p>
+        <h2>分阶段升级</h2>
+        <p>当前阶段加入文章详情、分类筛选、搜索和归档。后续再逐步加入音乐播放器、Live2D、评论区和更完整的 Shoka 动效。</p>
       </div>
     </section>
   </main>
