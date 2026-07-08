@@ -1,0 +1,235 @@
+.mascot-host {
+  position: fixed;
+  left: 22px;
+  bottom: 22px;
+  z-index: 55;
+  width: 210px;
+  user-select: none;
+  touch-action: none;
+}
+
+.mascot-host.is-hidden {
+  display: none;
+}
+
+.mascot-bubble {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 18px 18px 18px 6px;
+  background: var(--paper-strong);
+  color: var(--ink);
+  box-shadow: 0 16px 42px rgba(159, 115, 194, 0.16);
+  backdrop-filter: blur(18px);
+  font-size: 13px;
+  line-height: 1.55;
+  transform-origin: 24px 100%;
+  animation: mascot-pop 260ms ease-out both;
+}
+
+.mascot-bubble::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  bottom: -8px;
+  width: 14px;
+  height: 14px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--paper-strong);
+  transform: rotate(45deg);
+}
+
+.mascot-card {
+  position: relative;
+  width: 152px;
+  margin-left: 18px;
+  cursor: grab;
+  filter: drop-shadow(0 24px 26px rgba(159, 115, 194, 0.22));
+}
+
+.mascot-card:active {
+  cursor: grabbing;
+}
+
+.mascot-nameplate {
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  z-index: 3;
+  min-width: 96px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--pink), var(--purple), var(--blue));
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+  text-align: center;
+  transform: translateX(-50%);
+  box-shadow: 0 10px 24px rgba(255, 143, 199, 0.32);
+}
+
+.mascot-actions {
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  z-index: 4;
+  display: grid;
+  gap: 6px;
+}
+
+.mascot-action {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper-strong);
+  color: var(--muted);
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(159, 115, 194, 0.14);
+}
+
+.mascot-action:hover {
+  color: white;
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--pink), var(--purple));
+}
+
+.mascot-svg {
+  display: block;
+  width: 152px;
+  height: auto;
+  transform-origin: 50% 100%;
+  animation: mascot-idle 4.6s ease-in-out infinite;
+}
+
+.mascot-hair,
+.mascot-body,
+.mascot-face,
+.mascot-ear,
+.mascot-ribbon,
+.mascot-shadow,
+.mascot-eye,
+.mascot-mouth,
+.mascot-cheek {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.mascot-eye {
+  transform: translate(var(--eye-x, 0px), var(--eye-y, 0px));
+  transition: transform 120ms ease;
+}
+
+.mascot-ribbon {
+  animation: mascot-ribbon 3.2s ease-in-out infinite;
+}
+
+.mascot-ear.left {
+  animation: mascot-ear-left 4s ease-in-out infinite;
+}
+
+.mascot-ear.right {
+  animation: mascot-ear-right 4.4s ease-in-out infinite;
+}
+
+.mascot-shadow {
+  animation: mascot-shadow 4.6s ease-in-out infinite;
+}
+
+.mascot-summon {
+  position: fixed;
+  left: 18px;
+  bottom: 20px;
+  z-index: 54;
+  display: none;
+  min-height: 42px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 999px;
+  color: white;
+  background: linear-gradient(135deg, var(--pink), var(--purple), var(--blue));
+  box-shadow: 0 16px 38px rgba(255, 143, 199, 0.28);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 900;
+}
+
+.mascot-summon.is-visible {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@keyframes mascot-pop {
+  0% { opacity: 0; transform: translateY(8px) scale(0.96); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes mascot-idle {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-6px) rotate(1deg); }
+}
+
+@keyframes mascot-ribbon {
+  0%, 100% { transform: rotate(-4deg); }
+  50% { transform: rotate(5deg); }
+}
+
+@keyframes mascot-ear-left {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(5deg); }
+}
+
+@keyframes mascot-ear-right {
+  0%, 100% { transform: rotate(2deg); }
+  50% { transform: rotate(-5deg); }
+}
+
+@keyframes mascot-shadow {
+  0%, 100% { transform: scaleX(1); opacity: 0.28; }
+  50% { transform: scaleX(0.82); opacity: 0.18; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mascot-svg,
+  .mascot-ribbon,
+  .mascot-ear,
+  .mascot-shadow,
+  .mascot-bubble {
+    animation: none !important;
+  }
+
+  .mascot-eye {
+    transition: none !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .mascot-host {
+    left: 12px;
+    bottom: 84px;
+    width: 156px;
+  }
+
+  .mascot-card {
+    width: 110px;
+    margin-left: 8px;
+  }
+
+  .mascot-svg {
+    width: 110px;
+  }
+
+  .mascot-bubble {
+    max-width: 156px;
+    padding: 9px 10px;
+    font-size: 12px;
+  }
+
+  .mascot-nameplate {
+    min-width: 78px;
+    font-size: 11px;
+  }
+}
