@@ -1,0 +1,16 @@
+{
+  "heroLabel": "Shoka Inspired · GitHub Pages",
+  "heroTitle": "白莲的小站",
+  "heroSubtitle": "在代码、日常与幻想之间记录碎片。",
+  "heroNote": "一个逐步完善的二次元风格个人博客，内容数据存放在 GitHub 仓库中。",
+  "statusCards": [
+    { "label": "Posts", "value": "auto", "source": "posts" },
+    { "label": "Tags", "value": "auto", "source": "tags" },
+    { "label": "Categories", "value": "auto", "source": "categories" }
+  ],
+  "quickLinks": [
+    { "label": "写文章", "href": "https://github.com/Whitelotusking/whitelotusking.github.io/edit/main/anime-blog/data/posts.json" },
+    { "label": "改资料", "href": "https://github.com/Whitelotusking/whitelotusking.github.io/edit/main/anime-blog/data/profile.json" },
+    { "label": "看源码", "href": "https://github.com/Whitelotusking/whitelotusking.github.io/tree/main/anime-blog" }
+  ]
+}
