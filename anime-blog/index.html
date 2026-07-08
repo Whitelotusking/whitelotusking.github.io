@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>白莲的小站</title>
+  <meta name="description" content="一个 Shoka 风格的二次元个人博客，数据由 GitHub 仓库中的 JSON 文件驱动。" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+  <div class="sakura-layer" aria-hidden="true">
+    <span>✦</span><span>❀</span><span>✧</span><span>❀</span><span>✦</span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="返回首页">
+      <span class="brand-mark">白</span>
+      <span>Lotus Garden</span>
+    </a>
+    <nav class="nav">
+      <a href="#posts">文章</a>
+      <a href="#about">关于</a>
+      <a href="#links">友链</a>
+      <button id="theme-toggle" type="button" aria-label="切换主题">☾</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-card glass">
+        <p class="eyebrow">GitHub Pages · Anime Blog</p>
+        <h1 id="site-title">白莲的小站</h1>
+        <p id="site-subtitle" class="subtitle">在代码、日常与幻想之间记录碎片。</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#posts">开始阅读</a>
+          <a class="btn ghost" href="https://github.com/Whitelotusking" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+
+      <aside class="profile-card glass" id="about">
+        <div class="avatar" aria-hidden="true">ฅ</div>
+        <h2 id="author-name">Whitelotusking</h2>
+        <p id="author-bio">这里会放头像、简介、技能和联系方式。当前版本先使用默认内容。</p>
+        <div class="chips" id="profile-tags"></div>
+      </aside>
+    </section>
+
+    <section class="section" id="posts">
+      <div class="section-head">
+        <p class="eyebrow">Latest Posts</p>
+        <h2>最近文章</h2>
+      </div>
+      <div class="post-grid" id="post-list"></div>
+    </section>
+
+    <section class="section split" id="links">
+      <div class="glass info-panel">
+        <p class="eyebrow">GitHub as Data</p>
+        <h2>数据存储方式</h2>
+        <p>这个页面会读取仓库中的 <code>anime-blog/data/posts.json</code> 和 <code>anime-blog/data/profile.json</code>。之后你只要改 JSON 或 Markdown，就能更新网站内容。</p>
+      </div>
+      <div class="glass info-panel">
+        <p class="eyebrow">Todo</p>
+        <h2>下一步可加功能</h2>
+        <p>可以继续加入评论区、音乐播放器、Live2D 看板娘、文章详情页、标签归档和真正的 Hexo/Shoka 构建流程。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Whitelotusking</span>
+    <span>Powered by GitHub Pages</span>
+  </footer>
+
+  <script src="./assets/app.js"></script>
+</body>
+</html>
