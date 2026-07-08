@@ -5,10 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>白莲的小站</title>
   <meta name="description" content="一个 Shoka 风格的二次元个人博客，数据由 GitHub 仓库中的 JSON 文件驱动。" />
+  <meta property="og:title" content="白莲的小站" />
+  <meta property="og:description" content="在代码、日常与幻想之间记录碎片。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://whitelotusking.github.io/anime-blog/" />
+  <link rel="canonical" href="https://whitelotusking.github.io/anime-blog/" />
   <link rel="stylesheet" href="./assets/styles.css" />
   <link rel="stylesheet" href="./assets/blog-core.css" />
   <link rel="stylesheet" href="./assets/effects.css" />
   <link rel="stylesheet" href="./assets/mascot.css" />
+  <link rel="stylesheet" href="./assets/polish.css" />
 </head>
 <body>
   <div class="bg-orb orb-a"></div>
@@ -24,9 +30,10 @@
     </a>
     <nav class="nav">
       <a href="#posts">文章</a>
+      <a href="#tags">标签</a>
       <a href="#archive">归档</a>
-      <a href="#about">关于</a>
       <a href="#links">友链</a>
+      <a href="#guide">指南</a>
       <button id="theme-toggle" type="button" aria-label="切换主题">☾</button>
     </nav>
   </header>
@@ -34,20 +41,23 @@
   <main id="top">
     <section class="hero">
       <div class="hero-card glass">
-        <p class="eyebrow">GitHub Pages · Anime Blog</p>
+        <p class="eyebrow" id="hero-label">GitHub Pages · Anime Blog</p>
         <h1 id="site-title">白莲的小站</h1>
         <p id="site-subtitle" class="subtitle">在代码、日常与幻想之间记录碎片。</p>
+        <p id="hero-note" class="hero-note">一个逐步完善的二次元风格个人博客，内容数据存放在 GitHub 仓库中。</p>
         <div class="hero-actions">
           <a class="btn primary" href="#posts">开始阅读</a>
           <a class="btn ghost" href="https://github.com/Whitelotusking" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
 
-      <aside class="profile-card glass" id="about">
-        <div class="avatar" aria-hidden="true">ฅ</div>
-        <h2 id="author-name">Whitelotusking</h2>
-        <p id="author-bio">这里会放头像、简介、技能和联系方式。当前版本先使用默认内容。</p>
-        <div class="chips" id="profile-tags"></div>
+      <aside class="hero-visual glass" id="about">
+        <div class="hero-illustration" aria-hidden="true">
+          <span class="moon"></span>
+          <span class="cat"><span class="cat-face"><span></span><span></span></span><span class="cat-mouth"></span></span>
+        </div>
+        <div class="hero-stats" id="hero-stats"></div>
+        <div class="quick-links" id="quick-links"></div>
       </aside>
     </section>
 
@@ -63,6 +73,14 @@
       <div class="post-grid" id="post-list"></div>
     </section>
 
+    <section class="section" id="tags">
+      <div class="section-head">
+        <p class="eyebrow">Tag Cloud</p>
+        <h2>标签云</h2>
+      </div>
+      <div class="tag-cloud" id="tag-cloud"></div>
+    </section>
+
     <section class="section" id="archive">
       <div class="section-head">
         <p class="eyebrow">Archive</p>
@@ -71,16 +89,28 @@
       <div class="archive-list" id="archive-list"></div>
     </section>
 
-    <section class="section split" id="links">
+    <section class="section" id="links">
+      <div class="section-head">
+        <p class="eyebrow">Friends</p>
+        <h2>友链与入口</h2>
+      </div>
+      <div class="link-grid" id="friend-links"></div>
+    </section>
+
+    <section class="section split site-guide" id="guide">
       <div class="glass info-panel">
         <p class="eyebrow">GitHub as Data</p>
         <h2>数据存储方式</h2>
-        <p>这个页面会读取仓库中的 <code>anime-blog/data/posts.json</code> 和 <code>anime-blog/data/profile.json</code>。之后你只要改 JSON，就能更新网站内容。</p>
+        <p>这个页面会读取仓库中的 <code>anime-blog/data/*.json</code>。之后你只要改 JSON，就能更新文章、资料、友链、音乐、看板娘和评论配置。</p>
       </div>
       <div class="glass info-panel">
-        <p class="eyebrow">Stage Plan</p>
-        <h2>分阶段升级</h2>
-        <p>当前阶段已加入文章详情、分类筛选、搜索、归档、音乐播放器、鼠标特效、阅读进度条和 Live2D 风格看板娘。后续再逐步加入评论区和更完整的 Shoka 动效。</p>
+        <p class="eyebrow">Guide</p>
+        <h2>维护指南</h2>
+        <ul class="guide-list">
+          <li><strong>新增文章</strong>编辑 <code>data/posts.json</code>，添加新的文章对象。</li>
+          <li><strong>修改资料</strong>编辑 <code>data/profile.json</code> 和 <code>data/site.json</code>。</li>
+          <li><strong>启用评论</strong>按 README 中的 giscus 步骤填入 <code>comments.json</code>。</li>
+        </ul>
       </div>
     </section>
   </main>
