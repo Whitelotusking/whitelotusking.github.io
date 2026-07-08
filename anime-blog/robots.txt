@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://whitelotusking.github.io/anime-blog/sitemap.xml
