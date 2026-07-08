@@ -14,6 +14,7 @@ https://whitelotusking.github.io/anime-blog/
 - `data/posts.json`：文章列表、分类、标签、摘要和正文。
 - `data/music.json`：环境音乐播放器的原创合成器曲目配置。
 - `data/mascot.json`：Live2D 风格看板娘名称、提示语和闲置提示。
+- `data/comments.json`：giscus / GitHub Discussions 评论区配置。
 
 ## 新增文章
 
@@ -41,6 +42,18 @@ https://whitelotusking.github.io/anime-blog/
 post.html?id=my-new-post
 ```
 
+## 启用评论区
+
+评论模块已经接入文章详情页，但默认不会加载外部脚本。启用步骤：
+
+1. 在仓库 `Settings → Features` 中开启 Discussions。
+2. 安装 giscus GitHub App，并授权 `Whitelotusking/whitelotusking.github.io`。
+3. 打开 `https://giscus.app/zh-CN`，输入仓库名并选择 Discussion 分类。
+4. 复制生成配置里的 `repo-id` 和 `category-id`。
+5. 修改 `data/comments.json`：填入 `repoId`、`categoryId`，并把 `enabled` 改成 `true`。
+
+配置完成后，文章页评论区会自动加载 giscus。
+
 ## 当前阶段功能
 
 - 首页文章卡片
@@ -59,13 +72,15 @@ post.html?id=my-new-post
 - 看板娘拖拽位置记忆
 - 看板娘关闭与唤回
 - 看板娘视线跟随鼠标
+- giscus 评论区模块
+- 评论区缺配置时的安全占位提示
 
 ## 阶段记录
 
 - Stage 1：博客核心功能，包含文章详情、分类筛选、关键词搜索和归档。已完成。
 - Stage 2：音乐播放器、鼠标特效、阅读进度条、返回顶部和更多 Shoka 动效。已完成。
 - Stage 3：轻量 Live2D 风格看板娘，包含对话、关闭、唤回、拖拽和视线跟随。已完成。
-- Stage 4：评论区，建议使用 GitHub Discussions + giscus。
+- Stage 4：评论区模块，基于 GitHub Discussions + giscus，支持安全占位和配置后自动启用。已完成。
 - Stage 5：如需要，再迁移到 Hexo/ShokaX 或 Astro 正式博客工程。
 
 ## 注意
@@ -73,3 +88,5 @@ post.html?id=my-new-post
 当前音乐播放器不会加载外部版权音频，而是通过浏览器 Web Audio API 生成简单环境音。浏览器通常要求用户点击后才能播放音频，所以播放器不会自动播放。
 
 当前看板娘是轻量 SVG/CSS/JS 实现，不加载第三方 Live2D 模型。这样可以避免版权、性能和外部资源失效问题。之后如果你有可合法使用的 Live2D 模型文件，可以替换成真正的 Live2D Cubism 加载方案。
+
+当前评论区默认 `enabled: false`。这是为了避免在 Discussions、giscus App、`repoId` 和 `categoryId` 未配置完成前加载失败。
