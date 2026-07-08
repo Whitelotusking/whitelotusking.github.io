@@ -5,6 +5,7 @@
     "date": "2026-07-08",
     "category": "Blog",
     "summary": "这是第一篇文章，之后可以直接通过 GitHub 修改数据。",
+    "coverSymbol": "✦",
     "tags": ["Blog", "Start"],
     "body": [
       { "type": "p", "text": "这是这个博客的第一篇测试文章。当前版本使用 GitHub Pages 托管页面，并用仓库里的 JSON 文件保存文章数据。" },
@@ -19,6 +20,7 @@
     "date": "2026-07-08",
     "category": "Study",
     "summary": "记录算法、工程实践和学习过程。",
+    "coverSymbol": "⌘",
     "tags": ["CS", "Study"],
     "body": [
       { "type": "p", "text": "这个栏目可以用来放计算机学习记录，比如算法、数据结构、操作系统、Java 项目和工程调试过程。" },
@@ -33,6 +35,7 @@
     "date": "2026-07-08",
     "category": "Life",
     "summary": "记录生活、兴趣和喜欢的作品。",
+    "coverSymbol": "❀",
     "tags": ["Life", "Anime"],
     "body": [
       { "type": "p", "text": "这个栏目可以用来放生活记录、喜欢的动画作品、游戏体验、摄影、随笔或日常计划。" },
