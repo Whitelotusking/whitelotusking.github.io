@@ -1,0 +1,115 @@
+.comments-section {
+  margin-top: 42px;
+}
+
+.comments-card {
+  padding: clamp(22px, 5vw, 38px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  backdrop-filter: blur(22px);
+  box-shadow: var(--shadow);
+}
+
+.comments-head {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.comments-head h2 {
+  margin: 0;
+  font-size: clamp(28px, 5vw, 44px);
+  letter-spacing: -0.04em;
+}
+
+.comments-head p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.comments-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(255, 143, 199, 0.14);
+  color: #d85198;
+  font-size: 13px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.comments-placeholder {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border: 1px dashed var(--line);
+  border-radius: 22px;
+  background: var(--paper-strong);
+  color: var(--muted);
+}
+
+.comments-placeholder strong {
+  color: var(--ink);
+}
+
+.comments-steps {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.comments-steps li {
+  margin: 8px 0;
+}
+
+.comments-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.comments-actions a,
+.comments-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper-strong);
+  color: var(--muted);
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.comments-actions a:hover,
+.comments-actions button:hover {
+  color: white;
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--pink), var(--purple));
+}
+
+.giscus {
+  margin-top: 12px;
+}
+
+.giscus-frame {
+  border-radius: 18px;
+}
+
+@media (max-width: 760px) {
+  .comments-head {
+    display: block;
+  }
+
+  .comments-status {
+    margin-top: 12px;
+  }
+}
