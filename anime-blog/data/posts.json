@@ -1,20 +1,44 @@
 [
   {
+    "slug": "welcome-to-my-anime-blog",
     "title": "Welcome to My Anime Blog",
     "date": "2026-07-08",
+    "category": "Blog",
     "summary": "这是第一篇文章，之后可以直接通过 GitHub 修改数据。",
-    "tags": ["Blog", "Start"]
+    "tags": ["Blog", "Start"],
+    "body": [
+      { "type": "p", "text": "这是这个博客的第一篇测试文章。当前版本使用 GitHub Pages 托管页面，并用仓库里的 JSON 文件保存文章数据。" },
+      { "type": "h2", "text": "现在能做什么" },
+      { "type": "ul", "items": ["首页展示文章卡片", "文章详情页读取完整内容", "分类筛选、关键词搜索和归档", "保留后续接入 Markdown、评论和 Live2D 的空间"] },
+      { "type": "p", "text": "后面你只需要继续编辑 posts.json，或者让我帮你把内容迁移成 Markdown 文件，就能把它逐步变成正式博客。" }
+    ]
   },
   {
+    "slug": "learning-computer-science",
     "title": "Learning Computer Science",
     "date": "2026-07-08",
+    "category": "Study",
     "summary": "记录算法、工程实践和学习过程。",
-    "tags": ["CS", "Study"]
+    "tags": ["CS", "Study"],
+    "body": [
+      { "type": "p", "text": "这个栏目可以用来放计算机学习记录，比如算法、数据结构、操作系统、Java 项目和工程调试过程。" },
+      { "type": "h2", "text": "推荐记录方式" },
+      { "type": "ul", "items": ["问题背景：遇到了什么错误", "排查过程：确认了哪些原因", "最终修复：改了什么文件", "复盘总结：下次如何避免"] },
+      { "type": "p", "text": "这种结构适合作为学习笔记，也适合作为之后展示项目能力的作品集内容。" }
+    ]
   },
   {
+    "slug": "life-notes",
     "title": "Life Notes",
     "date": "2026-07-08",
+    "category": "Life",
     "summary": "记录生活、兴趣和喜欢的作品。",
-    "tags": ["Life", "Anime"]
+    "tags": ["Life", "Anime"],
+    "body": [
+      { "type": "p", "text": "这个栏目可以用来放生活记录、喜欢的动画作品、游戏体验、摄影、随笔或日常计划。" },
+      { "type": "h2", "text": "风格方向" },
+      { "type": "ul", "items": ["轻松一点的日常语气", "搭配粉蓝渐变和插画封面", "不需要太正式，但要保持排版清晰"] },
+      { "type": "p", "text": "后续加入音乐播放器和 Live2D 后，这一部分会更接近你喜欢的 Shoka 二次元博客效果。" }
+    ]
   }
 ]
