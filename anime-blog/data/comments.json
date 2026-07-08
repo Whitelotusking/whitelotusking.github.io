@@ -1,0 +1,24 @@
+{
+  "enabled": false,
+  "provider": "giscus",
+  "repo": "Whitelotusking/whitelotusking.github.io",
+  "repoId": "",
+  "category": "Announcements",
+  "categoryId": "",
+  "mapping": "pathname",
+  "strict": "0",
+  "reactionsEnabled": "1",
+  "emitMetadata": "0",
+  "inputPosition": "bottom",
+  "lang": "zh-CN",
+  "loading": "lazy",
+  "themeLight": "light",
+  "themeDark": "dark",
+  "setupSteps": [
+    "在 GitHub 仓库 Settings → Features 中开启 Discussions。",
+    "安装 giscus GitHub App，并授权 Whitelotusking/whitelotusking.github.io。",
+    "打开 https://giscus.app/zh-CN，输入仓库名并选择 Discussion 分类。",
+    "复制生成配置里的 repo-id 和 category-id。",
+    "回到 data/comments.json，填入 repoId/categoryId，并把 enabled 改成 true。"
+  ]
+}
