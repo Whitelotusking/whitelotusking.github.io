@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>文章详情 - 白莲的小站</title>
+  <meta name="description" content="白莲的小站文章详情页。" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <link rel="stylesheet" href="./assets/blog-core.css" />
+</head>
+<body>
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+  <div class="sakura-layer" aria-hidden="true">
+    <span>✦</span><span>❀</span><span>✧</span><span>❀</span><span>✦</span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="返回博客首页">
+      <span class="brand-mark">白</span>
+      <span>Lotus Garden</span>
+    </a>
+    <nav class="nav">
+      <a href="./#posts">文章</a>
+      <a href="./#archive">归档</a>
+      <a href="./#about">关于</a>
+      <button id="theme-toggle" type="button" aria-label="切换主题">☾</button>
+    </nav>
+  </header>
+
+  <main class="article-main">
+    <article class="glass article-shell" id="article-root">
+      <p class="eyebrow">Loading</p>
+      <h1 class="article-title">正在读取文章</h1>
+      <p class="article-summary">文章内容来自 GitHub 仓库中的 JSON 数据。</p>
+    </article>
+
+    <section class="section" id="related-section" hidden>
+      <div class="section-head">
+        <p class="eyebrow">Related</p>
+        <h2>相关文章</h2>
+      </div>
+      <div class="related-list" id="related-list"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Whitelotusking</span>
+    <span><a href="./">返回博客首页</a></span>
+  </footer>
+
+  <script src="./assets/post.js"></script>
+</body>
+</html>
