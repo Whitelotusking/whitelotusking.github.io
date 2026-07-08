@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>页面没有找到 - 白莲的小站</title>
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <link rel="stylesheet" href="./assets/blog-core.css" />
+  <link rel="stylesheet" href="./assets/effects.css" />
+  <style>
+    .not-found {
+      min-height: 72vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+    }
+    .not-found-card {
+      max-width: 720px;
+      padding: clamp(32px, 7vw, 72px);
+    }
+    .not-found-code {
+      margin: 0;
+      font-size: clamp(82px, 18vw, 160px);
+      line-height: 0.9;
+      letter-spacing: -0.08em;
+      background: linear-gradient(135deg, var(--pink), var(--purple), var(--blue));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+  <main class="not-found">
+    <section class="glass not-found-card">
+      <p class="not-found-code">404</p>
+      <p class="eyebrow">Page Not Found</p>
+      <h1>页面没有找到</h1>
+      <p class="subtitle">这个地址可能写错了，或者文章 slug 已经改变。</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="./">返回博客首页</a>
+        <a class="btn ghost" href="./#archive">查看归档</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
